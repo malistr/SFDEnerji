@@ -1,10 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace SFDEnerji.Web.Controllers
+namespace SFDEnerji.Web.Areas.Admin.Controllers
 {
-    public class AppUserController : Controller
+    public class MetaController : ControllerBase
     {
-
         public IActionResult Index()
         {
             return View();
