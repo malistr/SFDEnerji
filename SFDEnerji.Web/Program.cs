@@ -17,7 +17,7 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
     options.LoginPath = "/Admin/Login/Index";
     options.LogoutPath = "/Admin/Login/Logout";
     options.AccessDeniedPath = "/Admin/Login/AccessDenied";
-    options.ExpireTimeSpan = TimeSpan.FromMinutes(60);
+   
 });
 
 var app = builder.Build();
@@ -35,6 +35,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();//once kýmlýk dogrulamasý yap sonra oturum ac
 app.UseAuthorization();
 
 app.MapControllerRoute(

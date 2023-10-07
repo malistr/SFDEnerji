@@ -55,7 +55,7 @@ namespace SFDEnerji.Repository.Shared.Concrete
 
         public T GetFirstOrDefault(Expression<Func<T, bool>> filter)
         {
-            return _dbSet.FirstOrDefault(filter);
+            return _dbSet.Where(x=>x.IsDeleted==false).FirstOrDefault(filter);
 
         }
 
