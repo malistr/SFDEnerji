@@ -1,5 +1,9 @@
-﻿namespace SFDEnerji.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace SFDEnerji.Models
 {
+    [Table("Pages")]
+
     public class Page : BaseModel
     {
         public string Content { get; set; }
@@ -8,7 +12,8 @@
         public string? Thumbnail { get; set; }
 
         public int ViewCount { get; set; }
-        public virtual ICollection<Picture> Pictures { get; set; } = new List<Picture>();
+        public virtual ICollection<Picture>? Pictures { get; set; } = new List<Picture>();
+        public virtual ICollection<Meta>? Metas { get; set; } = new List<Meta>();
 
 
     }
