@@ -53,7 +53,7 @@ namespace SFDEnerji.Web.Areas.Admin.Controllers
                     new ClaimsPrincipal(claimsIdentity), 
                     new AuthenticationProperties{IsPersistent = loginDto.RememberMe});
 
-                return Ok();
+                return Ok("Giriş Başarılı");
 
             }
 
